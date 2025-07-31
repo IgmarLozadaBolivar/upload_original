@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ruta_destino = $ruta_carpeta . "/" . $nombre_archivo;
 
     if (move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta_destino)) {
-        header("Location: show-files.php");
+        header("Location: index.php");
         exit;
     } else {
         echo "Error al subir el archivo";
