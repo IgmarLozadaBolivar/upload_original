@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta_destino)) {
         echo "El archivo se subió correctamente";
+        header("Location: show-files.php");
     } else {
         echo "Error al subir el archivo";
     }
